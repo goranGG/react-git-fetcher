@@ -71,11 +71,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 # List of tasks
 
-[x] - create components
-[x] - create css files
-[x] - create fetch method
-[x] - display details
-[x] - display repositories
-[x] - reset data
-[ ] - reset form
-[ ] - cleanup
+- [x] create components
+- [x] create css files
+- [x] create fetch method
+- [x] display details
+- [x] display repositories
+- [x] reset data
+- [ ] reset form
+- [ ] cleanup
+
