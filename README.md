@@ -78,5 +78,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - [x] display repositories
 - [x] reset data
 - [x] reset form
-- [ ] cleanup
+- [x] cleanup
 

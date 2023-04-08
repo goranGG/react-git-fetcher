@@ -13,7 +13,9 @@ function UserForm() {
 
   function handleFormSubmit(event) {
     event.preventDefault();
-    fetchUser(formUsername);
+    if (formUsername !== "") {
+      fetchUser(formUsername);
+    }
   }
 
   return (
