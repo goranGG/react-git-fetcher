@@ -4,6 +4,7 @@ export function UserContextProvider({ children }) {
   const [user, setUser] = useState("");
   const [userData, setUserData] = useState([]);
   const [userReposData, setUserReposData] = useState([]);
+  const [formUsername, setFormUsername] = useState("");
 
   const fetchUser = (user) => {
     fetch(`https://api.github.com/users/${user}`)
@@ -26,11 +27,21 @@ export function UserContextProvider({ children }) {
     setUser("");
     setUserData([]);
     setUserReposData([]);
+    setFormUsername("");
   };
 
   return (
     <UserContext.Provider
-      value={{ user, setUser, fetchUser, userData, userReposData, resetUser }}
+      value={{
+        user,
+        setUser,
+        fetchUser,
+        userData,
+        userReposData,
+        resetUser,
+        formUsername,
+        setFormUsername,
+      }}
     >
       {children}
     </UserContext.Provider>

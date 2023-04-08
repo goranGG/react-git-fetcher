@@ -5,8 +5,7 @@ import "../../styles/user-form.css";
 import "../../styles/buttons.css";
 
 function UserForm() {
-  const [formUsername, setFormUsername] = useState("");
-  const { fetchUser } = useContext(UserContext);
+  const { fetchUser, formUsername, setFormUsername } = useContext(UserContext);
 
   function onUpdateUsername(event) {
     setFormUsername(event.target.value);
@@ -27,6 +26,7 @@ function UserForm() {
           className="input-username mb-20"
           id="input-username"
           onChange={onUpdateUsername}
+          value={formUsername}
           placeholder="Enter git account"
         />
         <button className="button button-submit" type="submit">

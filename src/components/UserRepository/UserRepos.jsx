@@ -3,7 +3,7 @@ import { UserContext } from "../../contexts/UserContext";
 
 function UserRepos() {
   const { userReposData } = useContext(UserContext);
-  const reposList = userReposData.map((repo) => <li>{repo.name}</li>);
+  const reposList = userReposData.map((repo) => <li key={repo.id}>{repo.name}</li>);
 
   return (
     <>
