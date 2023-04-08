@@ -1,0 +1,22 @@
+.button {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+}
+.button:hover {
+  cursor: pointer;
+}
+
+.button-submit {
+  background-color: whitesmoke;
+}
+
+.button-submit:hover {
+  background-color: beige;
+}
+
+.button-reset:hover {
+  background-color: crimson;
+}

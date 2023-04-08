@@ -8,9 +8,9 @@ function UserRepos() {
   return (
     <>
       <hr />
-      <div>UserRepos</div>
-      <hr />
+      <h1>UserRepos</h1>
       <ul>{reposList}</ul>
+      <hr className="mb-20" />
     </>
   );
 }

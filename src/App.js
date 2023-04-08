@@ -1,4 +1,5 @@
 import "./App.css";
+import ResetData from "./components/Reset/ResetData";
 import UserDetails from "./components/UserDetails/UserDetails";
 import UserForm from "./components/UserForm/UserForm";
 import UserRepos from "./components/UserRepository/UserRepos";
@@ -11,6 +12,7 @@ function App() {
         <UserForm></UserForm>
         <UserDetails></UserDetails>
         <UserRepos></UserRepos>
+        <ResetData></ResetData>
       </UserContextProvider>
     </div>
   );

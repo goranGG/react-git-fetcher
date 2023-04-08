@@ -1,0 +1,21 @@
+.user-form {
+  text-align: center;
+}
+
+.label-username {
+  font-size: 2em;
+  font-weight: bold;
+  display: block;
+}
+
+.input-username {
+  display: block;
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 0.7em;
+  background-color: whitesmoke;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
