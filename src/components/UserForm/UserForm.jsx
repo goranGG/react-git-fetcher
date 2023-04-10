@@ -9,7 +9,6 @@ function UserForm() {
   const [formUsername, setFormUsername] = useState("");
 
   useEffect(() => {
-    console.log(userData.length);
     if (userData.length === 0) {
       setFormUsername("");
     }
