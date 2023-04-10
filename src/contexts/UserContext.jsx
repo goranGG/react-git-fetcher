@@ -4,14 +4,16 @@ export function UserContextProvider({ children }) {
   const [user, setUser] = useState("");
   const [userData, setUserData] = useState([]);
   const [userReposData, setUserReposData] = useState([]);
-  const [formUsername, setFormUsername] = useState("");
 
   const fetchUser = (user) => {
     fetch(`https://api.github.com/users/${user}`)
       .then((response) => {
         return response.json();
       })
-      .then((data) => setUserData(data));
+      .then((data) => setUserData(data))
+      .catch((error) => {
+        console.log(error);
+      });
     fetchUserRepo(user);
   };
 
@@ -20,14 +22,16 @@ export function UserContextProvider({ children }) {
       .then((response) => {
         return response.json();
       })
-      .then((data) => setUserReposData(data));
+      .then((data) => setUserReposData(data))
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   const resetUser = () => {
     setUser("");
     setUserData([]);
     setUserReposData([]);
-    setFormUsername("");
   };
 
   return (
@@ -39,8 +43,6 @@ export function UserContextProvider({ children }) {
         userData,
         userReposData,
         resetUser,
-        formUsername,
-        setFormUsername,
       }}
     >
       {children}

@@ -5,9 +5,12 @@ import "../../styles/buttons.css";
 
 function ResetData() {
   const { resetUser } = useContext(UserContext);
+
   return (
     <div className="text-align-center">
-      <button className="button button-reset" onClick={resetUser}>Reset</button>
+      <button className="button button-reset" onClick={resetUser}>
+        Reset
+      </button>
     </div>
   );
 }

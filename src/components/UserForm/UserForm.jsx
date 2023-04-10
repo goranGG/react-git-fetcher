@@ -1,11 +1,19 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../contexts/UserContext";
 
 import "../../styles/user-form.css";
 import "../../styles/buttons.css";
 
 function UserForm() {
-  const { fetchUser, formUsername, setFormUsername } = useContext(UserContext);
+  const { userData, fetchUser } = useContext(UserContext);
+  const [formUsername, setFormUsername] = useState("");
+
+  useEffect(() => {
+    console.log(userData.length);
+    if (userData.length === 0) {
+      setFormUsername("");
+    }
+  }, [userData]);
 
   function onUpdateUsername(event) {
     setFormUsername(event.target.value);
